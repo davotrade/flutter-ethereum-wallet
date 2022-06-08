@@ -75,7 +75,7 @@ class CustomTokenPage extends HookConsumerWidget {
         color: Colors.green,
         child: Center(
           child: Text(
-            "${state.balance} CMTN",
+            "${state.balance} YANA",
             style: const TextStyle(fontSize: 30),
           ),
         ),
@@ -97,7 +97,7 @@ class CustomTokenPage extends HookConsumerWidget {
           Container(
             margin: EdgeInsets.zero,
             child: TextFieldView(
-              label: "取引額（CMTN）",
+              label: "取引額（YANA）",
               value: sendToken.value.toString(),
               inputType: TextInputType.number,
               onChange: (val) {
@@ -142,7 +142,7 @@ class CustomTokenPage extends HookConsumerWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
-          title: const Text("CustomToken"),
+          title: const Text("YANA"),
           centerTitle: true,
         ),
       ),

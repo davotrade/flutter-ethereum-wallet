@@ -9,7 +9,7 @@ import 'package:web3dart/web3dart.dart';
 
 final _networkUrl = dotenv.env["NETWORK_URL"]!;
 final customTokenAddress =
-    EthereumAddress.fromHex("0x803c6922F39792Bd17DE55Db7eFcd7b4a206ebA4");
+    EthereumAddress.fromHex("0xC3729645022AA0d372bAd6b39573eab2d2B40b09");
 
 class _Provider extends StateNotifier<_State> {
   _Provider() : super(_State.init());
@@ -23,7 +23,7 @@ class _Provider extends StateNotifier<_State> {
       final ethClient = Web3Client(_networkUrl, Client());
       final address = credentials.address;
       final token = Erc20(address: customTokenAddress, client: ethClient);
-      final balance = await token.balanceOf(address);
+      final balance = await token.balanceOf(address);//anadir una variable  para dividir para 1000 ya que el token tiene 4 decimales//
       await ethClient.dispose();
 
       state = state.setAddress(address);

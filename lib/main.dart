@@ -37,8 +37,8 @@ void main() async {
 Future<void> _initWallet() async {
   final rawPrivateKey = await DataStore().getPrivateKey();
   final EthPrivateKey credentials;
-  if (rawPrivateKey.isEmpty) {
-    credentials = EthPrivateKey.createRandom(Random.secure());
+  if (rawPrivateKey.isEmpty) {   //Aqui esta la condicional de la clave priv en el inicio//
+    credentials = EthPrivateKey.createRandom(Random.secure()); //Quitar aqui el random y get del storage//
     await DataStore().savePrivateKey(credentials.privateKeyInt.toString());
   } else {
     credentials = EthPrivateKey.fromInt(BigInt.parse(rawPrivateKey));

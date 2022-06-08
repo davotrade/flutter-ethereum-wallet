@@ -71,7 +71,7 @@ class HomePage extends HookConsumerWidget {
         color: Colors.green,
         child: Center(
           child: Text(
-            "${state.balance.getValueInUnit(EtherUnit.ether).toStringAsFixed(3)} Ether",
+            "${state.balance.getValueInUnit(EtherUnit.ether).toStringAsFixed(3)} tFTM",
             style: const TextStyle(fontSize: 30),
           ),
         ),

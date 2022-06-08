@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DataStore {
-  final _walletPrivateKey = "wallet-private-key";
+  final _walletPrivateKey = "";
 
   static final DataStore _singleton = DataStore._internal();
 
